@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+$font-family-sans-serif: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
+  'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-size-base: 1.125rem;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  small: $font-size-base * 0.75
+);
+
+$theme-colors: (
+  primary: #00b6f0
+);
+$primary: #00b6f0;
+$black: #1e1e1e;
+$progress-bar-bg: $primary;
+
+$body-bg: $black;
+$body-color: $gray-100;
+
+$border-radius: 1.25rem;
+
+$link-color: #482be7;
+$link-decoration: none;
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+$btn-padding-y: $input-btn-padding-y * 2;
+$btn-padding-x: $input-btn-padding-x * 5;
+$btn-padding-y-lg: $input-btn-padding-y * 2;
+$btn-padding-x-lg: $input-btn-padding-x * 7;
+
+$navbar-padding-y: $spacer * 2;
+$navbar-nav-link-padding-x: 3rem;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.container-narrow {
+  @include make-container();
+
+  @include media-breakpoint-up(md) {
+    max-width: 768px;
+  }
+}
+
+.btn-primary,
+.btn-outline-primary {
+  color: $gray-100;
+  &:focus,
+  &:hover {
+    color: $gray-100;
+  }
+}
+
+.fw-xbold {
+  font-weight: 900;
+}
