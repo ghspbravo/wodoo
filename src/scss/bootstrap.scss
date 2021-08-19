@@ -47,6 +47,11 @@ $navbar-nav-link-padding-x: 3rem;
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
+body, html {
+  position: relative;
+  overflow-x: hidden;
+}
+
 .container-narrow {
   @include make-container();
 
@@ -66,4 +71,12 @@ $navbar-nav-link-padding-x: 3rem;
 
 .fw-xbold {
   font-weight: 900;
+}
+
+.navbar-collapse {
+  @include media-breakpoint-down(md) {
+    background-color: rgba($color: $black, $alpha: 0.9);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

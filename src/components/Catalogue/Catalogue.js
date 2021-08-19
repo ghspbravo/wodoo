@@ -2,6 +2,7 @@ import React from 'react'
 import { sectionIds } from '../../constants'
 import iconCircle from '../../images/icon-circle-color.svg'
 import iconCircle2 from '../../images/icon-circle-color-2.svg'
+import iconCircleOutline from '../../images/icon-circle-outline.svg'
 import Claim from '../Forms/Claim'
 
 const catalogueList = [
@@ -22,10 +23,10 @@ export default function Catalogue() {
 
         <div className="mt-5">
           <div className="row justify-content-center gx-4 gy-4">
-            {catalogueList.map(({ title, description, price }, index) => <div key={index} className="col-lg-4">
-              <div className="rounded border h-100 p-5">
+            {catalogueList.map(({ title, description, price }, index) => <div key={index} className="col-xl-4 col-lg-6">
+              <div className="rounded border h-100 py-5 px-4">
                 <h4>{title}</h4>
-                <p className="mt-3 mb-5">{description}</p>
+                <p className="mt-3 mb-5 text-nowrap">{description}</p>
                 <span className="fw-xbold display-3">{price} ₽</span>
 
                 <div className="mt-4">
@@ -39,10 +40,12 @@ export default function Catalogue() {
       <div className="d-none d-lg-block">
         <img className="position-absolute" width={355} height={355} style={{ bottom: 60, left: -140, transform: 'rotate(0deg)' }} src={iconCircle} alt="" />
         <img className="position-absolute" style={{ bottom: 220, right: 50, transform: 'rotate(0deg)' }} src={iconCircle} alt="" />
+        <img className="position-absolute" width={44} height={44} style={{ bottom: 290, right: 60, transform: 'rotate(0deg)' }} src={iconCircleOutline} alt="" />
         <img className="position-absolute" style={{ top: 30, right: 250, transform: 'rotate(0deg)' }} src={iconCircle2} alt="" />
+        <img className="position-absolute" width={44} height={44} style={{ top: 60, left: 40, transform: 'rotate(0deg)' }} src={iconCircleOutline} alt="" />
       </div>
 
-      <div id="claimModal" className="modal text-dark" tabindex="-1">
+      <div id="claimModal" className="modal fade text-dark" tabindex="-1">
         <div className="modal-dialog modal-xl">
           <div className="modal-content">
             <div className="modal-header">

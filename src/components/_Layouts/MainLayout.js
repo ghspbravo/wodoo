@@ -13,7 +13,7 @@ const navList = [
 export default function MainLayout({ title = "Wild Wodoo", children }) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark">
+      <nav style={{ zIndex: 10 }} className="navbar navbar-expand-lg navbar-dark position-absolute w-100">
         <div className="container">
           <a className="navbar-brand" href="#">Wild Woodo</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@ export default function MainLayout({ title = "Wild Wodoo", children }) {
       <title>{title}</title>
       <main>{children}</main>
 
-      <footer className="py-5">
+      <footer className="py-5 bg-dark">
         <div className="container">
           <div className="d-flex flex-wrap justify-content-between align-items-center">
             <a className="navbar-brand text-reset mx-auto mx-lg-0" href="#">Wild Woodo</a>

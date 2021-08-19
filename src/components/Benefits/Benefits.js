@@ -1,18 +1,13 @@
 import React from 'react'
 import { sectionIds } from '../../constants'
 
-import analysis from '../../images/icon-analysis.svg';
-import speed from '../../images/icon-speed.svg';
-import technology from '../../images/icon-technology.svg';
+import personImage from '../../images/person-meditation.png';
 
 import iconZ from '../../images/icon-z.svg';
 import iconCircle from '../../images/icon-circle.svg';
-
-const benefitsList = [
-  { title: "Лучшая технология", image: technology, description: "Наша нейросеть поможет Вам разобраться в знаках судьбы, определиться со сложным выбором или подгадать наиболее благоприятное время для важных решений или перемен в жизни, чтобы раскрыть свой потенциал." },
-  { title: "Самый быстрый способ", image: speed, description: "Искусственный интеллект анализирует весь массив данных персонально для Вас и составляет наиболее полезное индивидуальное предсказание." },
-  { title: "Точный анализ", image: analysis, description: "Нейросеть учитывает способствующие и противодействующие вам силы на основании движения небесных тел, астрологического прогноза, предсказаний великих медиумов, дня вашего рождения, лунного календаря, нумерологии, раскладов Таро, игральных и цыганских карт, толкования рун." },
-]
+import iconCircleOutline from '../../images/icon-circle-outline.svg';
+import iconCircleColor from '../../images/icon-circle-color-2.svg';
+import iconx from '../../images/icon-x.svg';
 
 export default function Benefits() {
   return (
@@ -56,17 +51,49 @@ export default function Benefits() {
         </div>
       </div>
 
-      <div style={{ height: 20 }} />
+      <div style={{ height: 120 }} />
 
-      <div className="container-fluid mt-5">
-        <div className="row gy-3">
-          {benefitsList.map(({ title, description, image }, index) => <div key={index} className="col-lg-4">
-            <div className="text-center rounded border h-100 p-5">
-              <img src={image} alt={title} />
-              <h4 className="my-3">{title}</h4>
-              <p className="mt-5">{description}</p>
+      <div className="container-fluid mt-5 position-relative">
+        <div className="d-flex">
+          <div className="d-none d-lg-block">
+            <img src={personImage} alt="" />
+          </div>
+
+          <div className="mx-auto ms-lg-auto me-lg-5 col-md-10 col-lg-4">
+            <h4 className="text-center text-md-start display-5">Новые технологии предсказания</h4>
+            <p className="mt-3">Наша нейросеть поможет Вам разобраться в знаках судьбы, определиться со сложным выбором или подгадать наиболее благоприятное время для важных решений или перемен в жизни, чтобы раскрыть свой потенциал.</p>
+          </div>
+        </div>
+
+        <div style={{ height: 120 }} />
+
+        <div className="mt-5 container">
+          <div className="row gy-4 justify-content-around align-items-center">
+            <div className="col-lg-5">
+              <h4 className="display-6">Лучшие из лучших</h4>
+              <p className="mt-3">Нейросеть, обученная на предсказаниях величайших предсказателей мира, среди них:</p>
             </div>
-          </div>)}
+            <div className="col-lg-4">
+              <h5 className="h2 mb-2">Ванга</h5>
+              <h5 className="h2 mb-2">Вольф Мессинг</h5>
+              <h5 className="h2 mb-2">Григорий Распутин</h5>
+              <h5 className="h2">Василий Немчин</h5>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ height: 120 }} />
+
+        <div className="d-none d-lg-block">
+          <img width={88} height={88} className="position-absolute" style={{ top: -140, left: "45%", transform: 'rotate(90deg)' }} src={iconCircleColor} alt="" />
+          <img width={160} height={160} className="position-absolute" style={{ bottom: 310, right: "18%", transform: 'rotate(270deg)' }} src={iconCircleColor} alt="" />
+          <img width={66} height={66} className="position-absolute" style={{ bottom: 340, left: "26%", transform: 'rotate(0deg)' }} src={iconCircle} alt="" />
+          <img width={356} height={356} className="position-absolute" style={{ bottom: 390, right: -225, transform: 'rotate(0deg)' }} src={iconCircleOutline} alt="" />
+          <img width={27} height={27} className="position-absolute" style={{ bottom: 540, right: 20, transform: 'rotate(0deg)' }} src={iconx} alt="" />
+          <img width={27} height={27} className="position-absolute" style={{ bottom: 575, right: 20, transform: 'rotate(0deg)' }} src={iconx} alt="" />
+          <img width={356} height={356} className="position-absolute" style={{ top: -120, left: -245, transform: 'rotate(0deg)' }} src={iconCircleOutline} alt="" />
+          <img width={27} height={27} className="position-absolute" style={{ bottom: 100, right: "46%", transform: 'rotate(0deg)' }} src={iconx} alt="" />
+          <img width={27} height={27} className="position-absolute" style={{ bottom: 100, right: "50%", transform: 'rotate(0deg)' }} src={iconx} alt="" />
         </div>
       </div>
     </section>

@@ -1,7 +1,16 @@
 @import '../../scss/bootstrap.scss';
 
 .banner-layout {
-  min-height: 576px;
+  width: 100%;
+  height: 130vh;
+  min-height: 760px;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+.banner-contents {
+  margin-top: -150px;
 }
 
 .banner-bg {
@@ -14,4 +23,8 @@
 
   width: 100%;
   height: 100%;
+
+  @include media-breakpoint-down(md) {
+    width: 220%;
+  }
 }
